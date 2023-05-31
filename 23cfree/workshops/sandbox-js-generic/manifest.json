@@ -43,6 +43,11 @@
         "filename": "../../js-generic-post-execution-debugging/post-execution-debugging.md"
       },
       {
+        "title": "Bonus Lab: JavaScript Modules in APEX",
+        "description": "Using JavaScript in 23c",
+        "filename": "../../apex-javascript/apex-javascript.md"
+      },
+      {
         "title": "Lab 7: Instructions for setup, tear-down and backup",
         "description": "Learn how to configure the lab, tear it down, and back up your progress",
         "filename": "../../js-generic-appendix/appendix.md"

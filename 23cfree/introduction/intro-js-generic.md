@@ -10,7 +10,7 @@ This workshop introduces JavaScript in Oracle Database 23c on Linux x86-64 and w
 
 > **Note:** There is a strong focus on command line tools for a reason: many software projects rely on automation (keywords Continuous Integration/Continuous Delivery). Graphical user interfaces don't work in this workflow, however anything you can control on the command line does. This workshop aims at preparing you for working with Continuous Integration (CI) pipelines as much as possible. Note though that a wealth of IDEs exists for writing JavaScript code. Database Actions has strong support for JavaScript in Oracle Database 23c Free-Developer Release and you will see it used a lot.
 
-Estimated Workshop Time: 1 hours 30 minutes
+Estimated Workshop Time: 1 hours 45 minutes
 
 ### Objectives
 
@@ -22,6 +22,7 @@ In this workshop, you will learn how to:
 - Interact with the database using the JavaScript SQL Driver
 - Work effectively with JSON
 - Get insights into your code's behaviour using Post Execution Debugging
+- (Bonus!) Learn how to use open-source JavaScript code in APEX
 
 You may now proceed to the next lab.
 
