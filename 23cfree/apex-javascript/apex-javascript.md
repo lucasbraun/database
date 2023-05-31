@@ -98,7 +98,80 @@ Now, repeat the same step to import the `marked` module and - if not done yet as
     - version: 13.9.0
     - URL: https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/+esm
 
-### Task 3: Import App and make it run with JavaScript
+Last, but not least, we will need an environment that references all these three modules. In the object browser, hit the "+" button, select "MLE Environment":
+
+![](images/07-create-env.png " ")
+
+Enter "SAMPLE_APP" as the name for the evironment and click on "Create MLE Environment":
+
+![](images/08-create-book-app-env-1.png " ")
+
+Once created, click on "Add Import" to open the dialog for adding imports.
+
+![](images/08-create-book-app-env-2.png " ")
+
+Select "QRCODE" as schema and "qrcode" as its import name and hit "CREATE":
+
+![](images/08-create-book-app-env-3.png " ")
+
+Repeat the same step for importing "VALIDATOR" as "validator and "MARKED" as "marked".
+Finally, the created environment should look like this:
+
+![](images/08-create-book-app-env-5.png " ")
+
+## Task 3: Import App and make it run with JavaScript
+
+## Task 4: Backup
+
+### QR Code
+```
+<copy>
+const qrcode = requireModule('qrcode');
+
+// library specific options
+const code = qrcode(4, 'L');
+code.addData(apex.env.P20_URL);
+code.make();
+
+// saving the base64 result into a page item of type Display Image
+apex.env.P20_QRCODE = code.createDataURL(4);
+</copy>
+```
+
+### Validator
+
+```
+<copy>
+requireModule('validator').isEmail(apex.env.P15_EMAIL)
+requireModule('validator').isCreditCard(apex.env.P15_CREDIT_CARD)
+</copy>
+```
+
+### Marked
+```
+<copy>
+const marked = requireModule('marked');
+
+// library-specific options
+marked.setOptions({
+    headerIds: false
+});
+
+apex.env.P30_OUTPUT = marked(apex.env.P30_INPUT);'))
+</copy>
+```
+
+#### Sentiment
+```
+<copy>
+loadScript('mle-sentiment');
+
+var sentiment = new globalThis.Sentiment;
+var result = sentiment.analyze(apex.env.P70_CONTENT);
+
+apex.env.P70_RESULT = result.score;
+</copy>
+```
 
 ## Learn More
 
