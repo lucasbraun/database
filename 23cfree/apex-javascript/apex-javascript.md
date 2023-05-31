@@ -19,6 +19,8 @@ This lab assumes:
 
 ## Task 1: Login and create APEX workspace
 
+- TODO: add code for starting up ORDS
+
 1. Open Activities -> Google Chrome -> New Window
 
     ![Open Google Chrome](images/activities-chrome.png)
@@ -119,9 +121,39 @@ Finally, the created environment should look like this:
 
 ![](images/08-create-book-app-env-5.png " ")
 
-## Task 3: Import App and make it run with JavaScript
+## Task 3: Import App and Configure Environment for it
 
-## Task 4: Backup
+In order to demonstrate the imported modules at work, we import an existing APEX app that will use them.
+
+Go to "App Builder" -> "Import:
+
+![](images/09-import-app-1.png "")
+
+There, select the application file that you can download from [here](files/apex-javascript-23c.sql):
+
+![](images/09-import-app-2.png "")
+
+After selecting the file, click "Next" and then "Next" again, which brings you to an overview screen:
+
+![](images/09-import-app-3.png "")
+
+Click on "Install Application" which will complete after a while. Then click on "Edit Application" to perform the next steps:
+
+![](images/09-import-app-4.png "")
+
+In order to tell the application to use the MLE environment defined earlier, click into the search bar in the top row and enter "security", then click on "Shared Components / Security Attributes":
+
+![](images/10-set-env-1.png "")
+
+Click on "Database Session" and make sure to select "SAMPLE_APP" as MLE Environment before clicking "Apply Changes":
+
+![](images/10-set-env-2.png "")
+
+TODO: continue here...
+
+## Backup
+
+Code from old app that used requireModule instead of proper import.
 
 ### QR Code
 ```
