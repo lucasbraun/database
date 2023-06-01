@@ -96,9 +96,9 @@ Now, repeat the same step to import the `marked` module and - if not done yet as
     - version: 5.0.2
     - URL: https://cdn.jsdelivr.net/npm/marked@5.0.2/+esm
 - validator:
-    - name: https://cdn.jsdelivr.net/npm/validator@13.9.0/+esm
+    - name: VALIDATOR
     - version: 13.9.0
-    - URL: https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/+esm
+    - URL: https://cdn.jsdelivr.net/npm/validator@13.9.0/+esm
 
 Last, but not least, we will need an environment that references all these three modules. In the object browser, hit the "+" button, select "MLE Environment":
 
@@ -149,7 +149,7 @@ Click on "Database Session" and make sure to select "SAMPLE_APP" as MLE Environm
 
 ![](images/10-set-env-2.png "")
 
-TODO: continue here...
+TODO: continue here by entering the different code snippets that have to be inserted in the different page processes to make the demo work...
 
 ## Backup
 
@@ -194,6 +194,7 @@ apex.env.P30_OUTPUT = marked(apex.env.P30_INPUT);'))
 ```
 
 #### Sentiment
+Get it from `https://cdn.jsdelivr.net/npm/sentiment@5.0.2/+esm`
 ```
 <copy>
 loadScript('mle-sentiment');
