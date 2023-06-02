@@ -15,11 +15,15 @@ Learn how to:
 ### Prerequisites
 This lab assumes:
 - Lab 1 has been completed, i.e. user EMILY and module VALIDATOR exist.
-- You have ORDS running so you can open APEX 23.1.
 
 ## Task 1: Login and create APEX workspace
 
-- TODO: add code for starting up ORDS
+In order to use APEX, you need to first start ORDS.
+The following command will run ORDS in the background of your terminal. Do not close the terminal window or the ORDS server will stop. 
+
+```
+$ <copy>ords serve > /dev/null 2>&1 &</copy>
+```
 
 1. Open Activities -> Google Chrome -> New Window
 
@@ -68,6 +72,14 @@ This lab assumes:
     ![completetion screen](images/done.png)
 
 ## Task 2: Import MLE modules and env from open-source JavaScript code
+
+TODO1: add instructions for importing sentiment from `https://cdn.jsdelivr.net/npm/sentiment@5.0.2/+esm` and making it part of the environment.
+TODO2: for 23c sandbox environment, importing from URL will not work, instead curls the files from object store and then use importing from file. Here are the URLs for using object store:
+- https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/validator_13.9.0.mjs
+- https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/sentiment_5.2.0.mjs
+- https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/qrcode-generator_1.4.4.mjs
+- https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/marked_5.0.2.mjs
+- https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-javascript-23c.sql
 
 The APEX application that we will build will make use of the open-source JavaScript modules `validator`, `qrcode` and `marked` which we have to import into the database before using.
 If you completed Lab 1 successfully, `VALIDATOR` should already exist.
@@ -149,7 +161,7 @@ Click on "Database Session" and make sure to select "SAMPLE_APP" as MLE Environm
 
 ![](images/10-set-env-2.png "")
 
-TODO: continue here by entering the different code snippets that have to be inserted in the different page processes to make the demo work...
+TODO: continue here by entering the different code snippets that have to be inserted in the different page processes (see Backup section for old code snippets which need slight adjustments) to make the demo work...
 
 ## Backup
 
